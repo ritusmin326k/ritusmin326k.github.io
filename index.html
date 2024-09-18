@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Letter</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to CSS file -->
+</head>
+<body>
+    <div id="inputSection" class="center">
+        <h1>Sonething Special</h1>
+        <p>Please enter your name:</p>
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <button onclick="displayLoveLetter()">Enter</button>
+    </div>
+
+    <div id="letterSection" class="center" style="display:none;">
+        <h1>Dear <span id="userName"></span>,</h1>
+        <p>I just wanted to take a moment to tell you how much you mean to me. 
+        Your presence lights up my world and fills my heart with joy. 
+        You are truly amazing, and I am so grateful to have you in my life.</p>
+        <p>With all my love,</p>
+        <p>Your Secret Admirer</p>
+        <button id="acceptButton" onclick="showThankYou()" style="display:none;">Accept</button>
+    </div>
+
+    <div id="thankYouMessage" class="center" style="display:none;">
+        <h2>Thank you ❤️</h2>
+    </div>
+
+    <p id="errorMessage" class="center" style="color:red; display:none;">You are not Anushka!</p>
+
+    <!-- Section for password protection to view saved names -->
+    <div class="center" id="passwordSection">
+        <h2>Admin Access</h2>
+        <p>Enter the password to view the saved names:</p>
+        <input type="password" id="passwordInput" placeholder="Enter password">
+        <button onclick="checkPassword()">View Names</button>
+    </div>
+
+    <!-- Section to display saved names (initially hidden) -->
+    <div class="center" id="namesList" style="display:none;">
+        <h2>Names who have entered the site:</h2>
+        <ul id="savedNames"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
